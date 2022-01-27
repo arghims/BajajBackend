@@ -21,7 +21,8 @@ const loadNotes = ()=>{
     try{
         const dataBuffer = fs.readFileSync('notes.json')
         const dataJson = dataBuffer.toString()
-        return JSON.parse(dataJson)
+        const obj=JSON.parse(dataJson)
+        return obj
     }
     catch(e){
         return []
